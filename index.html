@@ -14,22 +14,28 @@
         }
         body, html {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4; /* لون الخلفية الفاتح */
-            color: #333; /* لون النص */
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
         }
         header {
-            background-color: #0088cc; /* لون رأس الصفحة */
-            color: #fff; /* لون النص في الرأس */
+            background-color: #0088cc;
+            color: #fff;
             padding: 15px 20px;
             text-align: center;
-            position: relative;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .back-button {
             position: absolute;
-            left: 20px; /* المسافة من اليسار */
-            top: 15px; /* المسافة من الأعلى */
-            background-color: #fff; /* لون خلفية الزر */
-            color: #0088cc; /* لون النص */
+            left: 20px;
+            top: 15px;
+            background-color: #fff;
+            color: #0088cc;
             border: none;
             padding: 10px;
             border-radius: 5px;
@@ -37,41 +43,41 @@
             transition: background-color 0.3s;
         }
         .back-button:hover {
-            background-color: #e0e0e0; /* لون خلفية الزر عند التحويم */
+            background-color: #e0e0e0;
         }
         header h1 {
             margin: 10px 0;
             font-size: 1.8em;
         }
         header img {
-            width: 60px; /* عرض الشعار */
-            height: 60px; /* ارتفاع الشعار */
-            border-radius: 50%; /* يجعل الشعار دائري */
-            vertical-align: middle; /* محاذاة الشعار مع النص */
-            margin-left: 10px; /* مسافة بين النص والشعار */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-left: 10px;
         }
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
-            padding: 20px;
-            max-width: 1200px; /* أقصى عرض للحاوية */
-            margin: auto; /* تمركز الحاوية */
+            padding: 160px 20px 20px; /* زيادة المسافة من أعلى إلى 160px */
+            max-width: 1200px;
+            margin: auto;
         }
         .product-card {
-            background-color: #ffffff; /* لون خلفية بطاقة المنتج */
+            background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل للبطاقة */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.2s;
         }
         .product-card:hover {
-            transform: translateY(-5px); /* تأثير التحويم */
+            transform: translateY(-5px);
         }
         .product-image {
-            width: 100%; /* عرض الصورة 100% */
-            height: 150px; /* ارتفاع الصورة */
-            object-fit: cover; /* تناسب الصورة */
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
         }
         .product-details {
             padding: 15px;
@@ -82,38 +88,39 @@
             font-weight: bold;
         }
         .product-price {
-            color: #0088cc; /* لون السعر */
+            color: #0088cc;
             font-size: 1.2em;
             margin: 5px 0;
         }
         .product-description {
-            padding: 0 10px;
             font-size: 0.9em;
             margin-bottom: 10px;
-            color: #555; /* لون النص الوصفي */
+            color: #555;
         }
         .button {
-            background-color: #33b5e5; /* لون زر عرض المنتج مشابه لألوان تلجرام */
-            color: #fff; /* لون النص في الزر */
+            background-color: #33b5e5;
+            color: #fff;
             padding: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            width: 100%; /* جعل الزر يغطي كامل العرض */
+            width: 100%;
             font-size: 1em;
         }
         .button:hover {
-            background-color: #0099cc; /* لون الزر عند التحويم */
+            background-color: #0099cc;
         }
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #0088cc; /* لون التذييل */
-            color: #fff; /* لون النص في التذييل */
-            position: relative;
+            background-color: #0088cc;
+            color: #fff;
+            position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1000;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -121,7 +128,7 @@
 
 <header>
     <button class="back-button" onclick="window.location.href='https://freeseries.github.io/Familyshophome1/'">رجوع</button>
-    <img src="https://i.suar.me/N2pO9/l" alt="شعار التطبيق" />
+    <img src="https://i.suar.me/N2pO9/l" alt="شعار التطبيق">
     <h1>Family Shop</h1>
 </header>
 
