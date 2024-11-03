@@ -24,6 +24,21 @@
             text-align: center;
             position: relative;
         }
+        .back-button {
+            position: absolute;
+            left: 20px; /* المسافة من اليسار */
+            top: 15px; /* المسافة من الأعلى */
+            background-color: #fff; /* لون خلفية الزر */
+            color: #0088cc; /* لون النص */
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #e0e0e0; /* لون خلفية الزر عند التحويم */
+        }
         header h1 {
             margin: 10px 0;
             font-size: 1.8em;
@@ -105,6 +120,7 @@
 <body>
 
 <header>
+    <button class="back-button" onclick="window.location.href='https://freeseries.github.io/Familyshophome1/'">رجوع</button>
     <img src="https://i.suar.me/N2pO9/l" alt="شعار التطبيق" />
     <h1>Family Shop</h1>
 </header>
