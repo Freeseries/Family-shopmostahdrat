@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة عرض المنتجات - Family Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4; /* لون الخلفية الفاتح */
+            color: #333; /* لون النص */
+        }
+        header {
+            background-color: #0088cc; /* لون رأس الصفحة */
+            color: #fff; /* لون النص في الرأس */
+            padding: 15px 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 1.8em;
+        }
+        header img {
+            width: 60px; /* عرض الشعار */
+            height: 60px; /* ارتفاع الشعار */
+            border-radius: 50%; /* يجعل الشعار دائري */
+            vertical-align: middle; /* محاذاة الشعار مع النص */
+            margin-left: 10px; /* مسافة بين النص والشعار */
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px; /* أقصى عرض للحاوية */
+            margin: auto; /* تمركز الحاوية */
+        }
+        .product-card {
+            background-color: #ffffff; /* لون خلفية بطاقة المنتج */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل للبطاقة */
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px); /* تأثير التحويم */
+        }
+        .product-image {
+            width: 100%; /* عرض الصورة 100% */
+            height: 150px; /* ارتفاع الصورة */
+            object-fit: cover; /* تناسب الصورة */
+        }
+        .product-details {
+            padding: 15px;
+        }
+        .product-title {
+            font-size: 1.4em;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .product-price {
+            color: #0088cc; /* لون السعر */
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .product-description {
+            padding: 0 10px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            color: #555; /* لون النص الوصفي */
+        }
+        .button {
+            background-color: #33b5e5; /* لون زر عرض المنتج مشابه لألوان تلجرام */
+            color: #fff; /* لون النص في الزر */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* جعل الزر يغطي كامل العرض */
+            font-size: 1em;
+        }
+        .button:hover {
+            background-color: #0099cc; /* لون الزر عند التحويم */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0088cc; /* لون التذييل */
+            color: #fff; /* لون النص في التذييل */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.suar.me/N2pO9/l" alt="شعار التطبيق" />
+    <h1>Family Shop</h1>
+</header>
+
+<div class="container">
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=منتج+1" alt="منتج 1" class="product-image">
+        <div class="product-details">
+            <div class="product-title">منتج 1</div>
+            <div class="product-price">1000 دينار</div>
+            <div class="product-description">وصف موجز للمنتج 1. يجمع بين الجودة والأداء العالي.</div>
+            <button class="button">عرض المنتج</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=منتج+2" alt="منتج 2" class="product-image">
+        <div class="product-details">
+            <div class="product-title">منتج 2</div>
+            <div class="product-price">1500 دينار</div>
+            <div class="product-description">وصف موجز للمنتج 2. مثالي للاستخدام اليومي.</div>
+            <button class="button">عرض المنتج</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=منتج+3" alt="منتج 3" class="product-image">
+        <div class="product-details">
+            <div class="product-title">منتج 3</div>
+            <div class="product-price">2000 دينار</div>
+            <div class="product-description">وصف موجز للمنتج 3. مصنوع بأعلى معايير الجودة.</div>
+            <button class="button">عرض المنتج</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=منتج+4" alt="منتج 4" class="product-image">
+        <div class="product-details">
+            <div class="product-title">منتج 4</div>
+            <div class="product-price">2500 دينار</div>
+            <div class="product-description">وصف موجز للمنتج 4. تصميم عصري يناسب الجميع.</div>
+            <button class="button">عرض المنتج</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Family Shop. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>
